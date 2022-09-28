@@ -1,0 +1,186 @@
+{
+  "packages": [
+    {
+      "count": 18,
+      "list": [
+        "eslint"
+      ]
+    },
+    {
+      "count": 11,
+      "list": [
+        "eslint-plugin-react",
+        "react",
+        "react-dom"
+      ]
+    },
+    {
+      "count": 8,
+      "list": [
+        "vite",
+        "vite-plugin-html"
+      ]
+    },
+    {
+      "count": 6,
+      "list": [
+        "@vitejs/plugin-react",
+        "typescript"
+      ]
+    },
+    {
+      "count": 5,
+      "list": [
+        "@tsconfig/node16",
+        "dotenv",
+        "prop-types"
+      ]
+    },
+    {
+      "count": 4,
+      "list": [
+        "@emotion/react",
+        "@emotion/styled",
+        "@mui/icons-material",
+        "@mui/material"
+      ]
+    },
+    {
+      "count": 3,
+      "list": [
+        "@types/node",
+        "eslint-plugin-import"
+      ]
+    },
+    {
+      "count": 2,
+      "list": [
+        "@actions/core",
+        "@actions/github",
+        "@fastify/cors",
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint/parser",
+        "@vercel/ncc",
+        "@vitejs/plugin-vue",
+        "@vue/compiler-sfc",
+        "autoprefixer",
+        "axios",
+        "d3",
+        "eslint-config-airbnb-base",
+        "eslint-plugin-vue",
+        "fastify",
+        "gatsby",
+        "gatsby-plugin-image",
+        "gatsby-plugin-sharp",
+        "gatsby-source-filesystem",
+        "gatsby-transformer-sharp",
+        "graphql-request",
+        "vue"
+      ]
+    },
+    {
+      "count": 1,
+      "list": [
+        "@babel/core",
+        "@fastify/compress",
+        "@fastify/formbody",
+        "@fastify/rate-limit",
+        "@fastify/static",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/free-brands-svg-icons",
+        "@fortawesome/react-fontawesome",
+        "@material-ui/core",
+        "@material-ui/icons",
+        "@mui/x-data-grid",
+        "@next/eslint-plugin-next",
+        "@react-native-community/masked-view",
+        "@react-navigation/native",
+        "@react-navigation/stack",
+        "@storybook/addon-essentials",
+        "@storybook/builder-vite",
+        "@storybook/react",
+        "@types/d3",
+        "@types/d3-cloud",
+        "@types/jsdom",
+        "@types/mongoose-sequence",
+        "@types/randomcolor",
+        "@types/react",
+        "@types/react-dom",
+        "@types/valid-url",
+        "@types/xml2js",
+        "@wojtekmaj/enzyme-adapter-react-17",
+        "aws-amplify",
+        "axios-jsonp-pro",
+        "babel-preset-expo",
+        "bootstrap",
+        "bulma",
+        "cypress",
+        "d3-cloud",
+        "emoji-js",
+        "enzyme",
+        "eslint-config-airbnb",
+        "eslint-config-next",
+        "eslint-plugin-cypress",
+        "eslint-plugin-jsx-a11y",
+        "expo",
+        "expo-web-browser",
+        "gatsby-awesome-pagination",
+        "gatsby-plugin-netlify",
+        "gatsby-plugin-netlify-cms",
+        "gatsby-plugin-purgecss",
+        "gatsby-plugin-react-helmet",
+        "gatsby-plugin-sass",
+        "gatsby-plugin-sitemap",
+        "gatsby-plugin-webpack-bundle-analyser-v2",
+        "gatsby-remark-copy-linked-files",
+        "gatsby-remark-images",
+        "gatsby-remark-prismjs",
+        "gatsby-remark-relative-images",
+        "gatsby-theme-material-ui",
+        "gatsby-transformer-remark",
+        "jsdom",
+        "lodash",
+        "lodash-webpack-plugin",
+        "mongoose",
+        "mongoose-sequence",
+        "netlify-cms-app",
+        "next",
+        "parcel",
+        "prettier",
+        "primeflex",
+        "primeicons",
+        "primevue",
+        "prism-themes",
+        "prismjs",
+        "randomcolor",
+        "react-bootstrap",
+        "react-helmet",
+        "react-native",
+        "react-native-gesture-handler",
+        "react-native-paper",
+        "react-native-reanimated",
+        "react-native-responsive-dimensions",
+        "react-native-safe-area-context",
+        "react-native-screens",
+        "react-native-svg",
+        "react-native-web",
+        "react-player",
+        "react-redux",
+        "react-router-dom",
+        "react-scripts",
+        "redux",
+        "redux-mock-store",
+        "redux-thunk",
+        "sanitize-html",
+        "sass",
+        "sequelize",
+        "shx",
+        "skia-canvas",
+        "sqlite3",
+        "undici",
+        "valid-url",
+        "xml2js"
+      ]
+    }
+  ]
+}

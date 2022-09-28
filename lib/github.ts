@@ -66,7 +66,7 @@ export async function getRepos(userid: string, authToken: string): Promise<Repo[
     // filter out repos not including one of specified languages
     repos = repos.filter(repo => (repo.languages.some((l: string) => npmLangs.includes(l))));
 
-    return repos as [Repo];
+    return repos as Repo[];
   } catch(e) {
     console.log('Call to GitHub GraphQL API failed');
     throw e;

@@ -34,6 +34,7 @@ export async function getPackages(userid: string, repos: Repo[]) {
   const packageList = pkgs.flat();
   let packages: PackageObject = {};
 
+  // Count Packages
   for (const dep of packageList) {
     if (dep in packages) {
       packages[dep]++;
@@ -43,6 +44,7 @@ export async function getPackages(userid: string, repos: Repo[]) {
     }
   }
 
+  // Creates lists of all the packages with same count
   let packageCount: SortedObj = {};
   for (const dep in packages) {
     const count = packages[dep];
@@ -53,6 +55,7 @@ export async function getPackages(userid: string, repos: Repo[]) {
     }
   }
 
+  // Sort array by descending count & packages alphabetically
   let sortedPkgs: SortedArr[] = [];
   for (const count in packageCount) {
     sortedPkgs.push({
