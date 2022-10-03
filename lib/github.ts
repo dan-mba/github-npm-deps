@@ -4,9 +4,10 @@ export type Repo = {
   name: string,
   defaultBranch: string,
   languages: string[]
-}
+};
 
-const npmLangs = ['JavaScript', 'TypeScript']
+const npmLangs = ['JavaScript', 'TypeScript'];
+const repoName = 'github-npm-deps';
 
 export async function getRepos(userid: string, authToken: string): Promise<Repo[]> {
   const endpoint = 'https://api.github.com/graphql';
@@ -63,8 +64,8 @@ export async function getRepos(userid: string, authToken: string): Promise<Repo[
       }
     });
 
-    // filter out repos not including one of specified languages
-    repos = repos.filter(repo => (repo.languages.some((l: string) => npmLangs.includes(l))));
+    // filter out this repo & repos not including one of specified languages
+    repos = repos.filter(repo => (repo.name != repoName && repo.languages.some((l: string) => npmLangs.includes(l))));
 
     return repos as Repo[];
   } catch(e) {
