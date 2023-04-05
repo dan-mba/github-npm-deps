@@ -6,6 +6,28 @@ export type Repo = {
   languages: string[]
 };
 
+type Response = {
+  user: {
+    repositories: {
+      nodes: {
+        name: string,
+        defaultBranchRef: {
+          name: string
+        },
+        languages: {
+          nodes: {
+            name: string
+          }[]
+        }
+      }[],
+      pageInfo: {
+        endCursor: string,
+        hasNextPage: boolean
+      }
+    }
+  }
+}
+
 const npmLangs = ['JavaScript', 'TypeScript'];
 const repoName = 'github-npm-deps';
 
@@ -43,7 +65,7 @@ export async function getRepos(userid: string, authToken: string): Promise<Repo[
   `;
 
   try {
-    let data: any = await graphqlClient.request(query, {"login": userid});
+    let data: Response = await graphqlClient.request(query, {"login": userid});
     let repos = [...data.user.repositories.nodes];
 
     while (data.user.repositories.pageInfo.hasNextPage) {
@@ -54,7 +76,7 @@ export async function getRepos(userid: string, authToken: string): Promise<Repo[
       repos = [...repos, ...data.user.repositories.nodes];
     }
     
-    repos = repos.map(repo => {
+    let retRepos = repos.map(repo => {
       const langs = repo.languages.nodes.map((lang: {name: string}) => lang.name);
 
       return {
@@ -65,9 +87,9 @@ export async function getRepos(userid: string, authToken: string): Promise<Repo[
     });
 
     // filter out this repo & repos not including one of specified languages
-    repos = repos.filter(repo => (repo.name != repoName && repo.languages.some((l: string) => npmLangs.includes(l))));
+    retRepos = retRepos.filter(repo => (repo.name != repoName && repo.languages.some((l: string) => npmLangs.includes(l))));
 
-    return repos as Repo[];
+    return retRepos;
   } catch(e) {
     console.log('Call to GitHub GraphQL API failed');
     throw e;
