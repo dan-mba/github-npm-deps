@@ -1,4 +1,3 @@
-import {fetch} from 'undici';
 import {Repo} from './github.js';
 
 type Package = {

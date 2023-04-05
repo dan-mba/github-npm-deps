@@ -43,7 +43,7 @@ export async function getRepos(userid: string, authToken: string): Promise<Repo[
   `;
 
   try {
-    let data = await graphqlClient.request(query, {"login": userid});
+    let data: any = await graphqlClient.request(query, {"login": userid});
     let repos = [...data.user.repositories.nodes];
 
     while (data.user.repositories.pageInfo.hasNextPage) {
